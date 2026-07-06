@@ -75,7 +75,7 @@ jobs:
           file: ./Dockerfile
           platforms: ${{ matrix.platform }}
           labels: ${{ steps.meta.outputs.labels }}
-          tags: ghcr.io/${{ steps.lowercase.outputs.owner }}/newtv:${{ github.event.inputs.tag || 'latest' }}
+          tags: ghcr.io/${{ steps.lowercase.outputs.owner }}/xwnewtv:${{ github.event.inputs.tag || 'latest' }}
           outputs: type=image,name=ghcr.io/${{ steps.lowercase.outputs.owner }}/xwnewtv,name-canonical=true,push=true
 
       - name: Export digest
